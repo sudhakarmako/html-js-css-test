@@ -1,10 +1,10 @@
 const r = document.querySelector(".row");
 let images = fetch("https://jsonplaceholder.typicode.com/posts").then((res) => {
-  res.forEach(({ data }) => {
+  res.array.forEach(({ data }) => {
     const req = fetch(`https://jsonplaceholder.typicode.com/photos/` + data.id);
     const img = req.json();
     let el_Div = document.createElement("div");
-    el_Div.classList.add("col");
+    el_Div.classList.add("row");
     el_Div.innerHTML = `<div class="card">
                         <img src="${img.url}" alt ="${img.title}" />
                           <header>
