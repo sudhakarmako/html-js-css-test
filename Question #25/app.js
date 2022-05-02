@@ -1,10 +1,18 @@
 function counter() {
+  
   var _counter = 0;
+ 
   return {
     add: function (increment) {
+     
       _counter += increment;
+      // console.log(_counter);
+      document.write(_counter);
+     
     },
+    
   };
+  
 }
 
 var c = counter();
