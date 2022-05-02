@@ -47,7 +47,7 @@ class LibrarySection {
       borrow ? (bookToUse.borrowed += 1) : (bookToUse.reading += quantity);
       return bookToUse.bookPlacement;
     } else {
-      return Out of stock;
+      return "Out of stock";
     }
   }
 

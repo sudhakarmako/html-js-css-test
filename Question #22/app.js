@@ -1,14 +1,17 @@
-function task(time) {
-  return new Promise(function (resolve, reject) {
-    setTimeout(function () {
-      resolve(time);
-    }, time);
-  });
-}
-const taskList = [task(1000), task(5000), task(3000)];
 
-myPromiseAll(taskList)
-  .then((results) => {
-    console.log("got results", results);
+   
+  const durations = [1000, 5000, 3000]
+   
+  const promises = []  
+   
+  durations.map((duration) => {
+     
+      
+    promises.push(tOut(duration))
   })
-  .catch(console.error);
+   
+  document.write(promises)
+   
+  
+  Promise.all(promises).then(response => document.write(response))
+   
