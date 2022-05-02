@@ -8,7 +8,7 @@ function counter() {
 }
 
 var c = counter();
-c.add(5);
-c.add(9);
+c.add(5);//5
+c.add(9);//9
 
 // What is the value of _counter, print the output
