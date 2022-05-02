@@ -1,17 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
+<!-- 
+    Table dosen't fit all foods.
+
+    Dynamically increase and decrease the rows and columns of the table on press of the button
+
+ -->
+
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>add/remove dynamic rows in html table</title>
 </head>
 
 <body>
-
-    <script src="app.js"></script>
+    <input type="button" value="add row" onclick="addrow('datatable')" />
+    <input type="button" value="add col" onclick="addCol('datatable')" />
+    <table id="datatable" width="350px" border="1">
+        <tr>
+            <td>
+                <input type="button" name="button1" value="delete" onclick="removerow('button1')" />
+            </td>
+            <td>1</td>
+            <td><input type="text" value="" name="nametxt" /></td>
+        </tr>
+    </table>
 </body>
 
 </html>
