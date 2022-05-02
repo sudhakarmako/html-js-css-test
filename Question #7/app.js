@@ -7,3 +7,10 @@ openModal.onclick = (e) => {
   model.classList.remove("active");
   model.classList.add("active");
 };
+
+
+const closed__popup = document.querySelector(".btn-clear");
+closed__popup.addEventListener("click",function(e){
+  const models = document.querySelector(".modal");
+    models.classList.remove("active");
+})
