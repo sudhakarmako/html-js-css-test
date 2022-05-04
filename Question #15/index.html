@@ -9,7 +9,6 @@
     { name: "Thomas", species:"cat"}
 ]
  -->
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,5 +24,22 @@
 
     <script src="app.js"></script>
 </body>
+<script>
+    var animals = [
+        { name: "Jason", species: "rabbit" },
+        { name: "Jessica", species: "dog" },
+        { name: "Jacky", species: "owl" },
+        { name: "Luke", species: "fish" },
+        { name: "Junior", species: "rat" },
+        { name: "Thomas", species: "cat" }
+    ];
+    animals.forEach(function (i) {
+        if (i.species == "dog") {
+            let check = i
+            console.log("check", check)
+        }
+    })
+
+</script>
 
 </html>

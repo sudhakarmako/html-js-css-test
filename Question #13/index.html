@@ -17,5 +17,25 @@
 
     <script src="app.js"></script>
 </body>
+<script>
+    let values = ['milk', 'bread', 'sugar']
+    function check(array) {
+        console.log("items");
+        array.forEach(e => {
+            console.log("e", array.includes(e));
+            if (array.includes(e)) {
+                console.log("exist item");
+                return "Exist"
+            }
+            else{
+                return "Not Exist"
+            }
+
+
+        })
+
+    }
+    check(values)
+</script>
 
 </html>
