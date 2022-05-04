@@ -1,6 +1,16 @@
 const r = document.querySelector(".row");
-let images = fetch("https://jsonplaceholder.typicode.com/posts").then((res) => {
-  res.forEach(({ data }) => {
+var myHeaders = new Headers();
+myHeaders.append("Content-Type", "application/json");
+
+var requestOptions = {
+  method: 'POST',
+  headers: myHeaders
+};
+let images = fetch("https://jsonplaceholder.typicode.com/posts",requestOptions).then(response => response.text())
+.then(result => {
+
+  console.log("=======>",result)
+  result.forEach(({ data }) => {
     const req = fetch(`https://jsonplaceholder.typicode.com/photos/` + data.id);
     const img = req.json();
     let el_Div = document.createElement("div");
@@ -19,3 +29,7 @@ let images = fetch("https://jsonplaceholder.typicode.com/posts").then((res) => {
     r.appendChild(el_Div);
   });
 });
+fetch("https://jsonplaceholder.typicode.com/posts", requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));
