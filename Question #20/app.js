@@ -42,12 +42,15 @@ class LibrarySection {
     })[0];
 
     // reduce the number of stocked books by one
+    console.log('shhdh',bookToUse)         
+    return
     if (bookToUse && quantity <= bookToUse.inStock) {
       bookToUse.inStock -= quantity;
+      
       borrow ? (bookToUse.borrowed += 1) : (bookToUse.reading += quantity);
       return bookToUse.bookPlacement;
     } else {
-      return Out of stock;
+      return Out of tock;
     }
   }
 
