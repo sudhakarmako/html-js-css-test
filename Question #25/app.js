@@ -2,6 +2,7 @@ function counter() {
   var _counter = 0;
   return {
     add: function (increment) {
+      console.log()
       _counter += increment;
     },
   };
