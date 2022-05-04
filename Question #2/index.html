@@ -21,8 +21,18 @@
     <button>Favicon</button>
     <button>Google</button>
     <button>Youtube</button>
+<div id="image">
+    <img src="/Users/avengers/Downloads/exam/html-js-css-test/Question #2/google.ico" alt="Logo" />
+</div>
 
     <script src="app.js"></script>
 </body>
-
+<script>
+   let symbols=[Default,Favicon,Google,Youtube] ;
+    symbol.forEach(element => {
+        if(element=="Default" ){
+            document.getElementById("image").show()
+        }
+    });
+</script>
 </html>
