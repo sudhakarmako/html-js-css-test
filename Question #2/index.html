@@ -13,16 +13,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel = "shortcut icon" href="./favicon.ico" id="favicon"> 
+    <!-- <link rel = "shortcut icon" href="./google.ico" id="google"> 
+    <link rel = "shortcut icon" href="./youtube.ico" id="youtube">  -->
     <title>Document</title>
 </head>
 
 <body>
-    <button>Default</button>
-    <button>Favicon</button>
-    <button>Google</button>
-    <button>Youtube</button>
+    <button type="button" onclick="toDefault()">Default</button>
+    <button type="button" onclick="toGoogle()">Google</button>
+    <button type="button" onclick="toYoutube()">Youtube</button>
 
     <script src="app.js"></script>
+    <script>
+        const favicon = document.getElementById("favicon")
+
+        function toGoogle(){
+            favicon.setAttribute("href", "./google.ico")
+        }
+
+        function toYoutube(){
+            favicon.setAttribute("href", "./youtube.ico")
+        }
+
+       function toDefault(){
+        favicon.setAttribute("href", "./favicon.ico")
+
+       }
+    </script>
 </body>
 
 </html>
