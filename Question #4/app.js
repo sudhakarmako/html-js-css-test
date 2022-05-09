@@ -1,8 +1,15 @@
-const r = document.querySelector(".row");
-let images = fetch("https://jsonplaceholder.typicode.com/posts").then((res) => {
-  res.forEach(({ data }) => {
-    const req = fetch(`https://jsonplaceholder.typicode.com/photos/` + data.id);
-    const img = req.json();
+const r = document.getElementById("row");
+let images = fetch("https://jsonplaceholder.typicode.com/posts").then((res) => res.json()).then((datas) => {
+console.log("🚀 ~ file: app.js ~ line 3 ~ images ~ data", datas)
+  datas.forEach(( data ) => {
+    let img;
+    const req = fetch(`https://jsonplaceholder.typicode.com/photos/${data.id}`).then((res) =>res.json()).then(img => {
+    console.log("🚀 ~ file: app.js ~ line 7 ~ req ~ img", img)
+  
+   
+    // console.log("🚀 ~ file: app.js ~ line 6 ~ datas.forEach ~ d", d)
+    
+  
     let el_Div = document.createElement("div");
     el_Div.classList.add("col");
     el_Div.innerHTML = `<div class="card">
@@ -16,6 +23,6 @@ let images = fetch("https://jsonplaceholder.typicode.com/posts").then((res) => {
                               <a class="button">Cancel</a>
                           </footer>
                       </div>`;
-    r.appendChild(el_Div);
+    r.appendChild(el_Div); });
   });
 });
