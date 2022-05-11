@@ -1,6 +1,6 @@
 const r = document.querySelector(".row");
 let images = fetch("https://jsonplaceholder.typicode.com/posts").then((res) => {
-  res.forEach((data ) => {
+  res.forEach(({ data }) => {
     const req = fetch(`https://jsonplaceholder.typicode.com/photos/` + data.id);
     const img = req.json();
     let el_Div = document.createElement("div");
