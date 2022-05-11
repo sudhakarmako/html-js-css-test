@@ -21,7 +21,10 @@ fetch("https://www.universal-tutorial.com/api/getaccesstoken", {
       },
     })
       .then((res) => res.json())
-      .then((data) => console.log(data));
+      .then((data) => (
+        console.log(data)
+        )
+        );
   });
 
 // fetch(`https://www.universal-tutorial.com/api/states/${countryName}`, {
